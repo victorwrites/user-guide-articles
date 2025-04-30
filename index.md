@@ -5,16 +5,45 @@ description: "A professional framework for writing clear, effective technical do
 author: Victor Hernandez
 ---
 
-<!-- 🔘 Toggle Switch Code START -->
+<!-- Toggle Switch -->
 <div style="position: fixed; top: 1rem; right: 1rem; z-index: 1000;">
   <label class="switch">
     <input type="checkbox" id="themeToggle" onchange="toggleTheme()">
     <span class="slider round"></span>
   </label>
-  <span id="themeLabel" style="margin-left: 0.5rem; font-size: 0.9rem;"></span>
+  <span id="themeLabel" style="margin-left: 0.5rem; font-size: 0.9rem;">Loading...</span>
 </div>
 
 <style>
+:root {
+  --bg-light: #ffffff;
+  --text-light: #000000;
+  --bg-dark: #111111;
+  --text-dark: #e0e0e0;
+  --link-dark: #8ab4f8;
+  --link-light: #0366d6;
+}
+
+/* Default body styles (so the theme classes work) */
+body.light {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+body.light a {
+  color: var(--link-light);
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.dark a {
+  color: var(--link-dark);
+}
+
+/* Toggle styling */
 .switch {
   position: relative;
   display: inline-block;
@@ -78,19 +107,21 @@ function setTheme(theme) {
 }
 
 function toggleTheme() {
-  const current = document.body.classList.contains("dark") ? "dark" : "light";
-  setTheme(current === "dark" ? "light" : "dark");
+  const isDark = document.body.classList.contains("dark");
+  setTheme(isDark ? "light" : "dark");
 }
 
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme) {
-  setTheme(savedTheme);
-} else {
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  setTheme(prefersDark ? "dark" : "light");
-}
+// Initialize theme on page load
+window.onload = function () {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "light" || savedTheme === "dark") {
+    setTheme(savedTheme);
+  } else {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    setTheme(prefersDark ? "dark" : "light");
+  }
+};
 </script>
-<!-- 🔘 Toggle Switch Code END -->
 
 # What Makes a Good User Guide? A Comprehensive Framework for Technical Manuals and Knowledge Bases
 
