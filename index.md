@@ -1,3 +1,9 @@
+---
+layout: post
+title: "What Makes a Good User Guide?"
+description: "A practical framework for writing clear, human-centered technical documentation"
+---
+
 # What Makes a Good User Guide? A Comprehensive Framework for Technical Manuals and Knowledge Bases
 
 User guides are more than just instructions—they're bridges between complex systems and the people who rely on them. Whether published as PDFs, printed manuals, or digital knowledge base articles, effective guides reduce risk, enable independence, and improve product adoption. This article offers a practical framework—grounded in real-world standards and modern tools—for creating user guides that are both technically accurate and human-centered.
