@@ -1,0 +1,25 @@
+/* Enable dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111;
+    color: #e0e0e0;
+  }
+
+  a {
+    color: #8ab4f8;
+  }
+
+  header, footer, .site-header, .site-footer {
+    background-color: #000;
+    border-color: #333;
+  }
+
+  code, pre {
+    background-color: #222;
+    color: #fff;
+  }
+
+  .post-title, .post-content h2, .post-content h3 {
+    color: #ffffff;
+  }
+}
