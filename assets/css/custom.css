@@ -1,0 +1,31 @@
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111;
+    color: #e0e0e0;
+  }
+
+  a {
+    color: #8ab4f8;
+  }
+
+  header,
+  .site-header,
+  footer,
+  .site-footer {
+    background-color: #000;
+    border-color: #333;
+  }
+
+  h1, h2, h3, h4, .post-title {
+    color: #ffffff;
+  }
+
+  code, pre {
+    background-color: #222;
+    color: #f8f8f8;
+  }
+
+  .highlight {
+    background-color: #1e1e1e;
+  }
+}
