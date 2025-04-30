@@ -4,6 +4,7 @@ title: "What Makes a Good User Guide?"
 description: "A professional framework for writing clear, effective technical documentation"
 author: Victor Hernandez
 ---
+
 <style>
 @media (prefers-color-scheme: dark) {
   body {
