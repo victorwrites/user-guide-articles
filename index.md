@@ -1,9 +1,8 @@
 ---
-layout: post
+layout: page
 title: "What Makes a Good User Guide?"
 description: "A professional framework for writing clear, effective technical documentation"
 author: Victor Hernandez
-theme: minima
 ---
 # What Makes a Good User Guide? A Comprehensive Framework for Technical Manuals and Knowledge Bases
 
