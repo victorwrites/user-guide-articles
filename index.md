@@ -5,81 +5,76 @@ description: "A professional framework for writing clear, effective technical do
 author: Victor Hernandez
 ---
 
+<!-- 🔘 Toggle Switch Code START -->
+<div style="position: fixed; top: 1rem; right: 1rem; z-index: 1000;">
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" onchange="toggleTheme()">
+    <span class="slider round"></span>
+  </label>
+  <span id="themeLabel" style="margin-left: 0.5rem; font-size: 0.9rem;"></span>
+</div>
+
 <style>
-:root {
-  --bg-color: #ffffff;
-  --text-color: #000000;
-  --link-color: #0366d6;
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
 }
 
-body.light {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-body.dark {
-  background-color: #111111;
-  color: #e0e0e0;
-}
-
-body.dark a {
-  color: #8ab4f8;
-}
-
-.toggle-theme {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.5rem 1rem;
-  background: none;
-  border: 1px solid currentColor;
-  border-radius: 5px;
+.slider {
+  position: absolute;
   cursor: pointer;
-  font-size: 0.9rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
 }
 </style>
-
-<style>
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #111 !important;
-    color: #e0e0e0 !important;
-  }
-
-  a {
-    color: #8ab4f8 !important;
-  }
-
-  header,
-  .site-header,
-  footer,
-  .site-footer {
-    background-color: #000 !important;
-    border-color: #333 !important;
-  }
-
-  h1, h2, h3, h4, .post-title {
-    color: #ffffff !important;
-  }
-
-  code, pre {
-    background-color: #222 !important;
-    color: #f8f8f8 !important;
-  }
-
-  .highlight {
-    background-color: #1e1e1e !important;
-  }
-}
-</style>
-
-<button class="toggle-theme" onclick="toggleTheme()">🌓 Toggle Theme</button>
 
 <script>
 function setTheme(theme) {
   document.body.classList.remove("light", "dark");
   document.body.classList.add(theme);
   localStorage.setItem("theme", theme);
+  const label = document.getElementById("themeLabel");
+  const toggle = document.getElementById("themeToggle");
+  if (theme === "dark") {
+    label.textContent = "Switch to Light Mode";
+    toggle.checked = true;
+  } else {
+    label.textContent = "Switch to Dark Mode";
+    toggle.checked = false;
+  }
 }
 
 function toggleTheme() {
@@ -95,6 +90,7 @@ if (savedTheme) {
   setTheme(prefersDark ? "dark" : "light");
 }
 </script>
+<!-- 🔘 Toggle Switch Code END -->
 
 # What Makes a Good User Guide? A Comprehensive Framework for Technical Manuals and Knowledge Bases
 
