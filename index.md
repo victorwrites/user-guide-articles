@@ -5,6 +5,42 @@ description: "A professional framework for writing clear, effective technical do
 author: Victor Hernandez
 ---
 
+
+<style>
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --link-color: #0366d6;
+}
+
+body.light {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.dark {
+  background-color: #111111;
+  color: #e0e0e0;
+}
+
+body.dark a {
+  color: #8ab4f8;
+}
+
+.toggle-theme {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+</style>
+
+
 <style>
 @media (prefers-color-scheme: dark) {
   body {
@@ -38,6 +74,31 @@ author: Victor Hernandez
   }
 }
 </style>
+
+<button class="toggle-theme" onclick="toggleTheme()">🌓 Toggle Theme</button>
+
+<script>
+function setTheme(theme) {
+  document.body.classList.remove("light", "dark");
+  document.body.classList.add(theme);
+  localStorage.setItem("theme", theme);
+}
+
+function toggleTheme() {
+  const current = document.body.classList.contains("dark") ? "dark" : "light";
+  setTheme(current === "dark" ? "light" : "dark");
+}
+
+// On load
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+  setTheme(savedTheme);
+} else {
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  setTheme(prefersDark ? "dark" : "light");
+}
+</script>
+
 
 # What Makes a Good User Guide? A Comprehensive Framework for Technical Manuals and Knowledge Bases
 
