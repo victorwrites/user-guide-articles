@@ -4,6 +4,40 @@ title: "What Makes a Good User Guide?"
 description: "A professional framework for writing clear, effective technical documentation"
 author: Victor Hernandez
 ---
+<style>
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111 !important;
+    color: #e0e0e0 !important;
+  }
+
+  a {
+    color: #8ab4f8 !important;
+  }
+
+  header,
+  .site-header,
+  footer,
+  .site-footer {
+    background-color: #000 !important;
+    border-color: #333 !important;
+  }
+
+  h1, h2, h3, h4, .post-title {
+    color: #ffffff !important;
+  }
+
+  code, pre {
+    background-color: #222 !important;
+    color: #f8f8f8 !important;
+  }
+
+  .highlight {
+    background-color: #1e1e1e !important;
+  }
+}
+</style>
+
 # What Makes a Good User Guide? A Comprehensive Framework for Technical Manuals and Knowledge Bases
 
 User guides are more than just instructions—they're bridges between complex systems and the people who rely on them. Whether published as PDFs, printed manuals, or digital knowledge base articles, effective guides reduce risk, enable independence, and improve product adoption. This article offers a practical framework—grounded in real-world standards and modern tools—for creating user guides that are both technically accurate and human-centered.
