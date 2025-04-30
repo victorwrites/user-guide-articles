@@ -42,6 +42,20 @@ body.dark {
 body.dark a {
   color: var(--link-dark);
 }
+
+body.dark .site-header a,
+body.dark nav a,
+body.dark .page-link {
+  color: var(--link-dark) !important;
+}
+
+/* 🔧 Fix code blocks and inline code in dark mode */
+body.dark pre,
+body.dark code,
+body.dark .highlight {
+  background-color: #222 !important;
+  color: #f8f8f8 !important;
+}
   
 /* Fix site header navigation links in dark mode */
 body.dark .site-header a,
