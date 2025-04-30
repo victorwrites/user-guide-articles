@@ -5,7 +5,6 @@ description: "A professional framework for writing clear, effective technical do
 author: Victor Hernandez
 ---
 
-
 <style>
 :root {
   --bg-color: #ffffff;
@@ -39,7 +38,6 @@ body.dark a {
   font-size: 0.9rem;
 }
 </style>
-
 
 <style>
 @media (prefers-color-scheme: dark) {
@@ -89,7 +87,6 @@ function toggleTheme() {
   setTheme(current === "dark" ? "light" : "dark");
 }
 
-// On load
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme) {
   setTheme(savedTheme);
@@ -98,7 +95,6 @@ if (savedTheme) {
   setTheme(prefersDark ? "dark" : "light");
 }
 </script>
-
 
 # What Makes a Good User Guide? A Comprehensive Framework for Technical Manuals and Knowledge Bases
 
