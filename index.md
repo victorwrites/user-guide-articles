@@ -42,6 +42,13 @@ body.dark {
 body.dark a {
   color: var(--link-dark);
 }
+  
+/* Fix site header navigation links in dark mode */
+body.dark .site-header a,
+body.dark nav a,
+body.dark .page-link {
+  color: var(--link-dark) !important;
+}
 
 /* Toggle styling */
 .switch {
